@@ -28,7 +28,7 @@ if( isset( $_REQUEST ) ) {
 
 			$existing_json = $wp_filesystem->get_contents( $existing_file );
 
-			$api_url = apply_filters( 'bstone_demo_api_url', 'https://wpbstone.com/demo-data/bstone-demo-data.json' );
+			$api_url = apply_filters( 'bstone_demo_api_url', 'https://wpbstone.com/wp-json/wp/v2' );
 
 			$bstone_demo_data_json = file_get_contents( $api_url );
 			
@@ -51,6 +51,7 @@ function bstone_load_demo_import_files() {
 	 * Import Notice
 	 */
 	$bst_in_default = __( 'Before you begin, make sure "<a href="https://wordpress.org/plugins/elementor/" target="_blank">Elementor</a>" plugin is installed and activated.', 'bstone-light' );
+	$bst_in_elementor_contact = __( 'Before you begin, make sure "<a href="https://wordpress.org/plugins/elementor/" target="_blank">Elementor</a>" and "<a href="https://wordpress.org/plugins/contact-form-7/" target="_blank">Contact Form 7</a>" plugins are installed and activated.', 'bstone-light' );
 
 	$wpbase_upload_dir = wp_upload_dir();
 	$dir = trailingslashit( $wpbase_upload_dir['basedir'] ) . 'bstone'. DIRECTORY_SEPARATOR;
@@ -66,6 +67,9 @@ function bstone_load_demo_import_files() {
 
 		if( 'default' == $demo->import_notice ) {
 			$demo_notice = $bst_in_default;
+
+		} else if( 'elementor_contact' == $demo->import_notice ) {
+			$demo_notice = $bst_in_elementor_contact;
 		}
 
 		$bst_demo_array = array(
