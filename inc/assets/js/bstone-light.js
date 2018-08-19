@@ -11,4 +11,13 @@ jQuery( document ).ready(function( $ ) {
         $( "h1.ocdi__title.dashicons-before.dashicons-upload" ).removeClass("dashicons-upload");
     }
 
+    // Get Json Data
+    fetch('https://wpbstone.com/wp-json/wp/v2/').then(response => {
+        return response.json();
+    }).then(data => {
+        
+    }).catch(err => {
+        
+    });
+
 });

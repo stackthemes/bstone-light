@@ -3,7 +3,7 @@
  * Plugin Name: Bstone Light
  * Plugin URI: https://wpbstone.com/
  * Description: Add extra features like widgets and import/export.
- * Version: 1.0.0
+ * Version: 1.0.3
  * Author: Stack Themes
  * Author URI: https://stackthemes.net/
  * Text Domain: bstone-light
@@ -22,7 +22,7 @@ if ( ! defined( 'BSTONE_LIGHT_NAME' ) ) {
 }
 
 if ( ! defined( 'BSTONE_LIGHT_VER' ) ) {
-	define( 'BSTONE_LIGHT_VER', '1.0.0' );
+	define( 'BSTONE_LIGHT_VER', '1.0.3' );
 }
 
 if ( ! defined( 'BSTONE_LIGHT_FILE' ) ) {

@@ -56,7 +56,7 @@ if ( ! function_exists( 'bstone_light_header_inner_markup' ) ) {
         </div>
 
         <div class="bst-header-buttons">
-            <a href="<?php echo BSTONE_LIGHT_LINK; ?>" class="support" target="_blank"><span class="dashicons dashicons-sos"></span> <?php echo __( 'Open A Support Ticket', 'bstone-light' ); ?></a>
+            <a href="<?php echo BSTONE_LIGHT_LINK; ?>support/" class="support" target="_blank"><span class="dashicons dashicons-sos"></span> <?php echo __( 'Open A Support Ticket', 'bstone-light' ); ?></a>
             <a href="<?php echo BSTONE_LIGHT_LINK; ?>documentation/" class="kb" target="_blank"><span class="dashicons dashicons-book"></span> <?php echo __( 'Knowledge Base', 'bstone-light' ); ?></a>
         </div>
         <?php
@@ -133,7 +133,7 @@ if ( ! function_exists( 'bstone_light_primary_section_getting_started_markup' ) 
             <ul class="bst-customizer-quick-links">
                 <li>
                     <a href="<?php echo esc_url( bstone_get_customizer_link( 'custom_logo', 'control' ) ); ?>" target="_blank">
-                        <span class="dashicons dashicons-format-image"></span>
+                        <span class="dashicons bstone-icon icon-logo"></span>
                         <span class="link-title"><?php echo __('Upload Logo', 'bstone-light'); ?></span>
                         <span class="link-desc"><?php echo __( 'Add your own logo and retina logo used for retina screens.', 'bstone-light' ); ?></span>
                     </a>
@@ -141,7 +141,7 @@ if ( ! function_exists( 'bstone_light_primary_section_getting_started_markup' ) 
 
                 <li>
                     <a href="<?php echo esc_url( bstone_get_customizer_link( 'panel-colors', 'panel' ) ); ?>" target="_blank">
-                        <span class="dashicons dashicons-admin-customizer"></span>
+                        <span class="dashicons bstone-icon icon-color"></span>
                         <span class="link-title"><?php echo __('Colors & Background', 'bstone-light'); ?></span>
                         <span class="link-desc"><?php echo __( 'Replace the default colors & backgrounds by your own.', 'bstone-light' ); ?></span>
                     </a>
@@ -149,7 +149,7 @@ if ( ! function_exists( 'bstone_light_primary_section_getting_started_markup' ) 
 
                 <li>
                     <a href="<?php echo esc_url( bstone_get_customizer_link( 'panel-typography', 'panel' ) ); ?>" target="_blank">
-                        <span class="dashicons dashicons-editor-textcolor"></span>
+                        <span class="dashicons bstone-icon icon-typography"></span>
                         <span class="link-title"><?php echo __('Customize Fonts', 'bstone-light'); ?></span>
                         <span class="link-desc"><?php echo __( 'Choose your own typography for any parts of your website.', 'bstone-light' ); ?></span>
                     </a>
@@ -157,7 +157,7 @@ if ( ! function_exists( 'bstone_light_primary_section_getting_started_markup' ) 
 
                 <li>
                     <a href="<?php echo esc_url( bstone_get_customizer_link( 'section-header', 'section' ) ); ?>" target="_blank">
-                        <span class="dashicons dashicons-align-center"></span>
+                        <span class="dashicons bstone-icon icon-header"></span>
                         <span class="link-title"><?php echo __('Header Options', 'bstone-light'); ?></span>
                         <span class="link-desc"><?php echo __( 'Choose the style, the height and the colors for your site header.', 'bstone-light' ); ?></span>
                     </a>
@@ -165,7 +165,7 @@ if ( ! function_exists( 'bstone_light_primary_section_getting_started_markup' ) 
 
                 <li>
                     <a href="<?php echo esc_url( bstone_get_customizer_link( 'section-footer', 'section' ) ); ?>" target="_blank">
-                        <span class="dashicons dashicons-admin-generic"></span>
+                        <span class="dashicons bstone-icon icon-footer"></span>
                         <span class="link-title"><?php echo __('Footer Settings', 'bstone-light'); ?></span>
                         <span class="link-desc"><?php echo __( 'Choose the columns number, paddings and colors of footer.', 'bstone-light' ); ?></span>
                     </a>
@@ -173,7 +173,7 @@ if ( ! function_exists( 'bstone_light_primary_section_getting_started_markup' ) 
 
                 <li>
                     <a href="<?php echo esc_url( bstone_get_customizer_link( 'section-sidebars', 'section' ) ); ?>" target="_blank">
-                        <span class="dashicons dashicons-align-left"></span>
+                        <span class="dashicons bstone-icon icon-siebar"></span>
                         <span class="link-title"><?php echo __('Sidebar Options', 'bstone-light'); ?></span>
                         <span class="link-desc"><?php echo __( 'Enable/Disable the side bar, add your own paddings and colors.', 'bstone-light' ); ?></span>
                     </a>
@@ -181,7 +181,7 @@ if ( ! function_exists( 'bstone_light_primary_section_getting_started_markup' ) 
 
                 <li>
                     <a href="<?php echo esc_url( bstone_get_customizer_link( 'section-container-layout', 'section' ) ); ?>" target="_blank">
-                        <span class="dashicons dashicons-layout"></span>
+                        <span class="dashicons bstone-icon icon-layout "></span>
                         <span class="link-title"><?php echo __('Layout Options', 'bstone-light'); ?></span>
                         <span class="link-desc"><?php echo __( 'Choose layouts for pages and posts, add your own paddings and borders.', 'bstone-light' ); ?></span>
                     </a>
@@ -189,7 +189,7 @@ if ( ! function_exists( 'bstone_light_primary_section_getting_started_markup' ) 
 
                 <li>
                     <a href="<?php echo esc_url( bstone_get_customizer_link( 'section-blog', 'section' ) ); ?>" target="_blank">
-                        <span class="dashicons dashicons-tagcloud"></span>
+                        <span class="dashicons bstone-icon icon-blog-layout"></span>
                         <span class="link-title"><?php echo __('Blog Layouts', 'bstone-light'); ?></span>
                         <span class="link-desc"><?php echo __( 'Choose layout of your blog and modify blog posts display style.', 'bstone-light' ); ?></span>
                     </a>

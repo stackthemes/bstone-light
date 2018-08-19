@@ -57,33 +57,39 @@ function bstone_load_demo_import_files() {
 	$dir = trailingslashit( $wpbase_upload_dir['basedir'] ) . 'bstone'. DIRECTORY_SEPARATOR;
 	$bst_demo_file = $dir . 'bstone-demo-data.json';
 	
+	if ( file_exists( $bst_demo_file ) ) {
 
-	$bstone_demo_data_json = file_get_contents( $bst_demo_file );
-	$bston_get_demo_data = json_decode( $bstone_demo_data_json );
+		$bstone_demo_data_json = file_get_contents( $bst_demo_file );
+		$bston_get_demo_data = json_decode( $bstone_demo_data_json );
 
-	foreach ($bston_get_demo_data->demos as $demo) {
+		if( is_array( $bston_get_demo_data->demos ) ) {
 
-		$demo_notice = __( 'Before you begin, make sure all the required plugins are activated.', 'bstone-light' );
+			foreach ($bston_get_demo_data->demos as $demo) {
 
-		if( 'default' == $demo->import_notice ) {
-			$demo_notice = $bst_in_default;
+				$demo_notice = __( 'Before you begin, make sure all the required plugins are activated.', 'bstone-light' );
 
-		} else if( 'elementor_contact' == $demo->import_notice ) {
-			$demo_notice = $bst_in_elementor_contact;
+				if( 'default' == $demo->import_notice ) {
+					$demo_notice = $bst_in_default;
+
+				} else if( 'elementor_contact' == $demo->import_notice ) {
+					$demo_notice = $bst_in_elementor_contact;
+				}
+
+				$bst_demo_array = array(
+					'import_file_name'           => $demo->name,
+					'categories'                 => $demo->categories,
+					'import_file_url'            => $demo->import_file_url,
+					'import_widget_file_url'     => $demo->widget_file_url,
+					'import_customizer_file_url' => $demo->customizer_file_url,
+					'import_preview_image_url'   => $demo->preview_image_url,
+					'import_notice'              => $demo_notice,
+					'preview_url'                => $demo->preview_url,
+				);
+
+				array_push( $bstone_demo_data_array, $bst_demo_array );
+			}
+
 		}
-
-		$bst_demo_array = array(
-			'import_file_name'           => $demo->name,
-			'categories'                 => $demo->categories,
-			'import_file_url'            => $demo->import_file_url,
-			'import_widget_file_url'     => $demo->widget_file_url,
-			'import_customizer_file_url' => $demo->customizer_file_url,
-			'import_preview_image_url'   => $demo->preview_image_url,
-			'import_notice'              => $demo_notice,
-			'preview_url'                => $demo->preview_url,
-		);
-
-		array_push( $bstone_demo_data_array, $bst_demo_array );
 	}
 
 	return $bstone_demo_data_array;
@@ -162,3 +168,6 @@ function bstone_demo_import_plugin_intro_text( $default_text ) {
 	return $default_text;
 }
 add_filter( 'pt-ocdi/plugin_intro_text', 'bstone_demo_import_plugin_intro_text' );
+
+
+
