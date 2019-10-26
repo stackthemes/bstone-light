@@ -3,9 +3,9 @@ Contributors: stackthemes
 Donate link: https://wpbstone.com/
 Tags: widgets, theme demos, one click import, bstone
 Requires at least: 4.5
-Requires PHP: 5.3
-Tested up to: 4.9.6
-Stable tag: 1.0.3
+Requires PHP: 5.6
+Tested up to: 5.2.4
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ This plugin will only work with the [Bstone](https://wpbstone.com/) theme.
 2. Widgets
 
 == Changelog ==
+
+v1.0.4
+* Added New Demo Importer Plugin
 
 v1.0.3
 * Added Social Icons Widget

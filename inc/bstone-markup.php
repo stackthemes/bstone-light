@@ -307,25 +307,25 @@ if ( ! function_exists( 'bstone_light_widget_markup_import_demos' ) ) {
                 <div class="bst-spacer"></div><div class="bst-spacer-2"></div>
 
                 <?php
-                    if( ! file_exists( WP_PLUGIN_DIR . '/one-click-demo-import/one-click-demo-import.php' ) ) {
+                    if( ! file_exists( WP_PLUGIN_DIR . '/bstone-demo-importer/bstone-demo-importer.php' ) ) {
 
                         $class       = 'bst-widget-button bst-sites-notinstalled';
                         $button_text = __( 'Install Importer Plugin', 'bstone-light' );
-                        $data_slug   = 'one-click-demo-import';
-                        $data_init   = '/one-click-demo-import/one-click-demo-import.php';
+                        $data_slug   = 'bstone-demo-importer';
+                        $data_init   = '/bstone-demo-importer/bstone-demo-importer.php';
 
-                    } else if( is_plugin_inactive( 'one-click-demo-import/one-click-demo-import.php' ) ) {
+                    } else if( is_plugin_inactive( 'bstone-demo-importer/bstone-demo-importer.php' ) ) {
 
                         $class       = 'bst-widget-button bst-sites-inactive';
                         $button_text = __( 'Activate Importer Plugin', 'bstone-light' );
-                        $data_slug   = 'one-click-demo-import';
-                        $data_init   = '/one-click-demo-import/one-click-demo-import.php';
+                        $data_slug   = 'bstone-demo-importer';
+                        $data_init   = '/bstone-demo-importer/bstone-demo-importer.php';
 
                     } else {
 
                         $class       = 'bst-widget-button bst-view-sites';
                         $button_text = __( 'See Demo Sites', 'bstone-light' );
-                        $link        = admin_url( 'themes.php?page=bstone-demo-import' );
+                        $link        = admin_url( 'themes.php?page=demo-importer&browse=all' );
                     }
 
                     printf(

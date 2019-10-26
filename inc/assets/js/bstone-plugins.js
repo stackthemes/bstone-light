@@ -83,7 +83,7 @@
 					url: bstone.ajaxUrl,
 					type: 'POST',
 					data: {
-						'action'            : 'one-click-demo-import-plugin-activate',
+						'action'            : 'bstone-demo-importer-plugin-activate',
 						'init'              : $init,
 					},
 				})

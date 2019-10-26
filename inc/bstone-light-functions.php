@@ -74,7 +74,7 @@ function bstone_required_plugin_activate() {
     );
 
 }
-add_action( 'wp_ajax_one-click-demo-import-plugin-activate', 'bstone_required_plugin_activate' );
+add_action( 'wp_ajax_bstone-demo-importer-plugin-activate', 'bstone_required_plugin_activate' );
 
 /**
  * Get Bstone Light Options
@@ -82,38 +82,3 @@ add_action( 'wp_ajax_one-click-demo-import-plugin-activate', 'bstone_required_pl
 function bstone_light_get_option( $id = '' ) {
 	return Bstone_Light_Customizer_Options::get_bstone_light_option( $id );
 }
-
-/**
- * Disable Customizer Sections - Based on settings in options page
- */
-function bst_modify_customize_sections() {     
-    global $wp_customize;
-
-    $bst_customizer_sections = array(
-        'panel-layout' => 'panel',
-        'panel-colors' => 'panel',
-        'panel-typography' => 'panel',
-        'panel-spacing' => 'panel',
-        'section-posts-slider' => 'section',
-        'section-pagination-settings' => 'section',
-        'section-forms-settings' => 'section',
-        'section-scroll-top-settings' => 'section'
-    );
-
-    foreach( $bst_customizer_sections as $section => $type ):
-        $settings_val = bstone_light_get_option( 'bst-enable-' . $section );
-
-        if( null != $settings_val ) {
-            if( 'panel' == $type ) {
-
-                $wp_customize->remove_panel( $section );
-
-            } else if( 'section' == $type ) {
-
-                $wp_customize->remove_section( $section );
-            }
-        }
-    endforeach;
-} 
-    
-add_action( 'customize_register', 'bst_modify_customize_sections', 11 );
